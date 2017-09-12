@@ -314,7 +314,7 @@ func checkTransactionStandard(tx *btcutil.Tx, height int32,
 		sigScriptLen := len(txIn.SignatureScript)
 		if sigScriptLen > maxStandardSigScriptSize {
 			str := fmt.Sprintf("transaction input %d: signature "+
-				"script size of %d bytes is large than max "+
+				"script size of %d bytes is larger than max "+
 				"allowed size of %d bytes", i, sigScriptLen,
 				maxStandardSigScriptSize)
 			return txRuleError(wire.RejectNonstandard, str)
